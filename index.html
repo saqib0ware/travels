@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kataria Tour & Travels | Jammu & Kashmir</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ocean: {
+                            500: '#006994',
+                            600: '#005f86',
+                            700: '#004e6e',
+                        },
+                        mountain: {
+                            500: '#2E8B57',
+                            600: '#256f46',
+                            700: '#1c5435',
+                        },
+                        snow: '#F8F9FA',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1595846519845-68e298c2edd8?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-snow font-sans text-gray-800">
+
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-ocean-700 flex items-center gap-2">
+                <i class="fas fa-mountain text-mountain-500"></i> Kataria Travels
+            </a>
+            <div class="hidden md:flex space-x-8 font-medium text-gray-600">
+                <a href="#home" class="hover:text-ocean-600 transition">Home</a>
+                <a href="#services" class="hover:text-ocean-600 transition">Services</a>
+                <a href="#packages" class="hover:text-ocean-600 transition">Packages</a>
+                <a href="#gallery" class="hover:text-ocean-600 transition">Destinations</a>
+                <a href="#contact" class="hover:text-ocean-600 transition">Contact</a>
+            </div>
+            <button class="md:hidden text-ocean-700 text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-bg h-screen flex items-center justify-center text-center px-4">
+        <div class="max-w-3xl text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">Experience the Paradise on Earth</h1>
+            <p class="text-xl md:text-2xl mb-8 drop-shadow-md">Premium Tours & Travels in Jammu & Kashmir</p>
+            <a href="#packages" class="bg-mountain-500 hover:bg-mountain-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg inline-flex items-center gap-2">
+                Book Now <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-6 relative -mt-16 z-20">
+        <div class="bg-white rounded-lg shadow-xl p-6 grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div>
+                <label class="block text-sm font-bold text-gray-700 mb-1">Destination</label>
+                <input type="text" placeholder="Where to?" class="w-full border rounded p-2 focus:outline-none focus:border-ocean-500">
+            </div>
+            <div>
+                <label class="block text-sm font-bold text-gray-700 mb-1">Check In</label>
+                <input type="date" class="w-full border rounded p-2 focus:outline-none focus:border-ocean-500">
+            </div>
+            <div>
+                <label class="block text-sm font-bold text-gray-700 mb-1">Guests</label>
+                <select class="w-full border rounded p-2 focus:outline-none focus:border-ocean-500">
+                    <option>1 Person</option>
+                    <option selected>2 People</option>
+                    <option>Family (3+)</option>
+                </select>
+            </div>
+            <div class="flex items-end">
+                <button class="w-full bg-ocean-600 text-white font-bold py-2 rounded hover:bg-ocean-700 transition">
+                    Check Availability
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <section id="services" class="py-20 bg-snow">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-ocean-700 mb-4">Our Premium Services</h2>
+                <div class="w-20 h-1 bg-mountain-500 mx-auto rounded"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition text-center group">
+                    <div class="w-16 h-16 bg-ocean-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-ocean-600 transition">
+                        <i class="fas fa-hotel text-2xl text-ocean-600 group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Luxury Accommodations</h3>
+                    <p class="text-gray-600">We partner with the finest 3-star and 5-star hotels across J&K to ensure your stay is comfortable and memorable.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition text-center group">
+                    <div class="w-16 h-16 bg-ocean-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-ocean-600 transition">
+                        <i class="fas fa-car text-2xl text-ocean-600 group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Car Rentals & Transport</h3>
+                    <p class="text-gray-600">Reliable local transportation in J&K. From SUVs for mountain terrain to luxury sedans for city tours.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition text-center group">
+                    <div class="w-16 h-16 bg-ocean-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-ocean-600 transition">
+                        <i class="fas fa-taxi text-2xl text-ocean-600 group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Pan-India Cab Service</h3>
+                    <p class="text-gray-600">Need to travel beyond the valley? We provide seamless cab services connecting J&K to the rest of India.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="packages" class="py-20 bg-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1566837945700-30057527ade0?q=80&w=1000&auto=format&fit=crop" alt="Kashmir Landscape" class="rounded-2xl shadow-2xl">
+            </div>
+            <div class="md:w-1/2">
+                <span class="text-mountain-600 font-bold uppercase tracking-wider text-sm">Best Seller</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-ocean-700 mt-2 mb-6">The Magical Kashmir Package</h2>
+                <p class="text-gray-600 mb-6 text-lg">
+                    Explore the valleys of Srinagar, the meadows of Gulmarg, and the glaciers of Sonmarg. Experience the hospitality of Kashmir with our all-inclusive tour.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-mountain-500"></i> <span>5 Days / 4 Nights</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-mountain-500"></i> <span>Breakfast & Dinner</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-mountain-500"></i> <span>Shikara Ride</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-mountain-500"></i> <span>Airport Pickup</span>
+                    </div>
+                </div>
+
+                <div class="bg-snow border-l-4 border-ocean-600 p-4 mb-8">
+                    <p class="text-gray-500 text-sm">Starting Price</p>
+                    <p class="text-4xl font-bold text-ocean-700">₹14,999 <span class="text-lg text-gray-500 font-normal">/ per head</span></p>
+                </div>
+
+                <button class="bg-ocean-600 hover:bg-ocean-700 text-white font-bold py-3 px-8 rounded shadow-lg transition">
+                    Book This Package
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-20 bg-snow">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-ocean-700 mb-4">Top Destinations</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover the crown jewels of Kashmir. From the frozen lakes to the flowering meadows.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-80">
+                    <img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Dal Lake">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+                        <h3 class="text-white text-xl font-bold">Dal Lake</h3>
+                        <p class="text-gray-200 text-sm">Srinagar</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-80">
+                    <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gulmarg">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+                        <h3 class="text-white text-xl font-bold">Gulmarg</h3>
+                        <p class="text-gray-200 text-sm">Skiing Paradise</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-80">
+                    <img src="https://images.unsplash.com/photo-1595846519845-68e298c2edd8?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Sonmarg">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+                        <h3 class="text-white text-xl font-bold">Sonmarg</h3>
+                        <p class="text-gray-200 text-sm">Meadow of Gold</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-80">
+                    <img src="https://images.unsplash.com/photo-1623157299066-665287f32997?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Pahalgam">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+                        <h3 class="text-white text-xl font-bold">Pahalgam</h3>
+                        <p class="text-gray-200 text-sm">Valley of Shepherds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-ocean-700 mb-12">What Our Travelers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-6 rounded-lg border border-gray-100">
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"Kataria Tour & Travels made our honeymoon magical. The houseboat stay in Dal Lake was unforgettable!"</p>
+                    <p class="font-bold text-ocean-700">- Rahul Sharma, Delhi</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-lg border border-gray-100">
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"Excellent cab service. The driver was very polite and acted as a guide throughout our trip to Sonmarg."</p>
+                    <p class="font-bold text-ocean-700">- Anita Desai, Mumbai</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-lg border border-gray-100">
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"Great value for money. The ₹14,999 package covered everything we needed. Highly recommended!"</p>
+                    <p class="font-bold text-ocean-700">- Vikram Singh, Punjab</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-ocean-700 text-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="bg-ocean-600 rounded-lg p-4 cursor-pointer">
+                    <summary class="font-bold flex justify-between items-center">
+                        Is airfare included in the package? <i class="fas fa-chevron-down"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-100">The standard ₹14,999 package covers land transport, stay, and meals. Airfare is booked separately.</p>
+                </details>
+                <details class="bg-ocean-600 rounded-lg p-4 cursor-pointer">
+                    <summary class="font-bold flex justify-between items-center">
+                        Do you provide cab services outside J&K? <i class="fas fa-chevron-down"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-100">Yes, we provide cab services across India for outstation trips.</p>
+                </details>
+                <details class="bg-ocean-600 rounded-lg p-4 cursor-pointer">
+                    <summary class="font-bold flex justify-between items-center">
+                        Is it safe to travel to Kashmir now? <i class="fas fa-chevron-down"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-100">Absolutely. Kashmir is a safe and welcoming destination for tourists from all over the world.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <h3 class="text-2xl font-bold mb-4">Kataria Travels</h3>
+                    <p class="text-gray-400">Your trusted partner for exploring the valleys of Jammu & Kashmir and beyond.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-mountain-500">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Home</a></li>
+                        <li><a href="#" class="hover:text-white">About Us</a></li>
+                        <li><a href="#" class="hover:text-white">Tour Packages</a></li>
+                        <li><a href="#" class="hover:text-white">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-mountain-500">Contact Us</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Srinagar, Jammu & Kashmir, India</li>
+                        <li><i class="fas fa-phone mr-2"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@katariatravels.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-mountain-500">Newsletter</h4>
+                    <form class="flex flex-col gap-2">
+                        <input type="email" placeholder="Your Email" class="bg-gray-800 text-white p-2 rounded focus:outline-none">
+                        <button class="bg-ocean-600 hover:bg-ocean-500 text-white font-bold py-2 rounded">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Kataria Tour & Travels. All rights reserved.</p>
+                <div class="mt-4 space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
