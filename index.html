@@ -42,6 +42,7 @@
             <a href="#" class="text-2xl font-bold text-ocean-700 flex items-center gap-2">
                 <i class="fas fa-mountain text-mountain-500"></i> Kataria Travels
             </a>
+    
             <div class="hidden md:flex space-x-8 font-medium text-gray-600">
                 <a href="#home" class="hover:text-ocean-600 transition">Home</a>
                 <a href="#services" class="hover:text-ocean-600 transition">Services</a>
@@ -49,11 +50,43 @@
                 <a href="#gallery" class="hover:text-ocean-600 transition">Destinations</a>
                 <a href="#contact" class="hover:text-ocean-600 transition">Contact</a>
             </div>
-            <button class="md:hidden text-ocean-700 text-2xl">
+    
+            <button id="mobile-menu-btn" class="md:hidden text-ocean-700 text-2xl focus:outline-none">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
+    
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 shadow-lg">
+            <div class="flex flex-col space-y-4 font-medium text-gray-600">
+                <a href="#home" class="hover:text-ocean-600 transition block">Home</a>
+                <a href="#services" class="hover:text-ocean-600 transition block">Services</a>
+                <a href="#packages" class="hover:text-ocean-600 transition block">Packages</a>
+                <a href="#gallery" class="hover:text-ocean-600 transition block">Destinations</a>
+                <a href="#contact" class="hover:text-ocean-600 transition block">Contact</a>
+            </div>
+        </div>
     </nav>
+
+    <!-- Floating WhatsApp & Phone Icons -->
+    <div class="fixed right-4 bottom-20 flex flex-col gap-4 z-50">
+        <!-- WhatsApp Icon -->
+        <a href="https://wa.me/917889773071" target="_blank" 
+            class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
+                <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+
+        <!-- Mobile/Phone Icon -->
+        <a href="tel:+917889773071" 
+            class="bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition">
+                <i class="fas fa-phone-volume text-2xl"></i>
+        </a>
+
+        <!-- Gmail -->
+        <a href="mailto:bookings@katariatravels.com" 
+            class="bg-red-500 text-white p-4 rounded-full shadow-lg hover:bg-red-600 transition">
+                <i class="fas fa-envelope text-2xl"></i>
+        </a>
+    </div>
 
     <header id="home" class="hero-bg h-screen flex items-center justify-center text-center px-4">
         <div class="max-w-3xl text-white">
@@ -299,5 +332,26 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                // Toggle the 'hidden' class to show/hide the menu
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Optional: Close menu when a link is clicked (better UX)
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
 </body>
 </html>
