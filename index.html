@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kataria Tour & Travels | Jammu & Kashmir</title>
+    <link rel="icon" type="image" href="assets/logo.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script>
@@ -29,7 +30,7 @@
     </script>
     <style>
         .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1595846519845-68e298c2edd8?q=80&w=1920&auto=format&fit=crop');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/header.jpg?auto=format&fit=crop');
             background-size: cover;
             background-position: center;
         }
@@ -37,52 +38,64 @@
 </head>
 <body class="bg-snow font-sans text-gray-800">
 
-    <nav class="bg-white shadow-md fixed w-full z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-ocean-700 flex items-center gap-2">
-                <i class="fas fa-mountain text-mountain-500"></i> Kataria Travels
-            </a>
-    
-            <div class="hidden md:flex space-x-8 font-medium text-gray-600">
-                <a href="#home" class="hover:text-ocean-600 transition">Home</a>
-                <a href="#services" class="hover:text-ocean-600 transition">Services</a>
-                <a href="#packages" class="hover:text-ocean-600 transition">Packages</a>
-                <a href="#gallery" class="hover:text-ocean-600 transition">Destinations</a>
-                <a href="#contact" class="hover:text-ocean-600 transition">Contact</a>
+    <nav class="bg-white text-mountain-700 border-b-4 border-mountain-500 shadow-md fixed w-full z-50 transition-all duration-300" id="navbar" >
+        <div class="px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-26">
+                <div class="flex items-center">
+                    <a href="#"
+                        class="flex items-center gap-4 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-mountain-700 whitespace-nowrap">
+                        <img src="assets/logo.jpg" alt="Kataria Tour & Travels"
+                            class="h-16 w-16 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 object-contain">
+                        Kataria Travels
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#home" class="relative px-4 py-2 rounded-full transition duration-300 hover:bg-ocean-700 hover:text-white">Home</a>
+                    <a href="#services" class="relative px-4 py-2 rounded-full transition duration-300 hover:bg-ocean-700 hover:text-white">Services</a>
+                    <a href="#packages" class="relative px-4 py-2 rounded-full transition duration-300 hover:bg-ocean-700 hover:text-white">Packages</a>
+                    <a href="#gallery" class="relative px-4 py-2 rounded-full transition duration-300 hover:bg-ocean-700 hover:text-white">Destinations</a>
+                    <a href="#contact" class="bg-accent text-primary px-5 py-2 rounded-full hover:bg-ocean-700 transition shadow-lg hover:text-snow transform hover:-translate-y-0.5">Book Now</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-secondary hover:text-ocean-700 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
-    
-            <button id="mobile-menu-btn" class="md:hidden text-ocean-700 text-2xl focus:outline-none">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
-    
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 shadow-lg">
-            <div class="flex flex-col space-y-4 font-medium text-gray-600">
-                <a href="#home" class="hover:text-ocean-600 transition block">Home</a>
-                <a href="#services" class="hover:text-ocean-600 transition block">Services</a>
-                <a href="#packages" class="hover:text-ocean-600 transition block">Packages</a>
-                <a href="#gallery" class="hover:text-ocean-600 transition block">Destinations</a>
-                <a href="#contact" class="hover:text-ocean-600 transition block">Contact</a>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-secondary hover:text-snow hover:bg-ocean-700 rounded-md">Home</a>
+                <a href="#services" class="block px-3 py-2 text-secondary hover:text-snow hover:bg-ocean-700 rounded-md">Services</a>
+                <a href="#packages" class="block px-3 py-2 text-secondary hover:text-snow hover:bg-ocean-700 rounded-md">Packages</a>
+                <a href="#gallery" class="block px-3 py-2 text-secondary hover:text-snow hover:bg-ocean-700 rounded-md">Destinations</a>
+                <a href="#contact" class="block px-3 py-2 text-primary bg-white font-bold hover:bg-ocean-700 hover:text-snow rounded-md">Book Now</a>
             </div>
         </div>
     </nav>
-
+    
     <!-- Floating WhatsApp & Phone Icons -->
     <div class="fixed right-4 bottom-20 flex flex-col gap-4 z-50">
         <!-- WhatsApp Icon -->
-        <a href="https://wa.me/917889773071" target="_blank" 
+        <a href="https://wa.me/917298256040" target="_blank" 
             class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
                 <i class="fab fa-whatsapp text-2xl"></i>
         </a>
 
         <!-- Mobile/Phone Icon -->
-        <a href="tel:+917889773071" 
+        <a href="tel:+917298256040" 
             class="bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition">
                 <i class="fas fa-phone-volume text-2xl"></i>
         </a>
 
         <!-- Gmail -->
-        <a href="mailto:bookings@katariatravels.com" 
+        <a href="mailto:katariatourandtravel11@gmail.com" 
             class="bg-red-500 text-white p-4 rounded-full shadow-lg hover:bg-red-600 transition">
                 <i class="fas fa-envelope text-2xl"></i>
         </a>
@@ -98,33 +111,7 @@
         </div>
     </header>
 
-    <div class="container mx-auto px-6 relative -mt-16 z-20">
-        <div class="bg-white rounded-lg shadow-xl p-6 grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div>
-                <label class="block text-sm font-bold text-gray-700 mb-1">Destination</label>
-                <input type="text" placeholder="Where to?" class="w-full border rounded p-2 focus:outline-none focus:border-ocean-500">
-            </div>
-            <div>
-                <label class="block text-sm font-bold text-gray-700 mb-1">Check In</label>
-                <input type="date" class="w-full border rounded p-2 focus:outline-none focus:border-ocean-500">
-            </div>
-            <div>
-                <label class="block text-sm font-bold text-gray-700 mb-1">Guests</label>
-                <select class="w-full border rounded p-2 focus:outline-none focus:border-ocean-500">
-                    <option>1 Person</option>
-                    <option selected>2 People</option>
-                    <option>Family (3+)</option>
-                </select>
-            </div>
-            <div class="flex items-end">
-                <button class="w-full bg-ocean-600 text-white font-bold py-2 rounded hover:bg-ocean-700 transition">
-                    Check Availability
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <section id="services" class="py-20 bg-snow">
+    <section id="services" class="scroll-mt-16 py-20 bg-snow">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-ocean-700 mb-4">Our Premium Services</h2>
@@ -156,46 +143,114 @@
         </div>
     </section>
 
-    <section id="packages" class="py-20 bg-white">
+          
+    <section id="packages" class="scroll-mt-16 py-20 bg-snow">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <!-- Image -->
             <div class="md:w-1/2">
-                <img src="https://images.unsplash.com/photo-1566837945700-30057527ade0?q=80&w=1000&auto=format&fit=crop" alt="Kashmir Landscape" class="rounded-2xl shadow-2xl">
+                <img src="assets/main.jpg?q=80&w=800&auto=format&fit=crop"
+                    alt="Kashmir Landscape" class="rounded-2xl shadow-2xl">
             </div>
+    
+            <!-- Package Summary -->
             <div class="md:w-1/2">
                 <span class="text-mountain-600 font-bold uppercase tracking-wider text-sm">Best Seller</span>
-                <h2 class="text-3xl md:text-5xl font-bold text-ocean-700 mt-2 mb-6">The Magical Kashmir Package</h2>
+                <h2 class="text-2xl md:text-4xl font-bold text-ocean-700 mt-2 mb-6">The Magical Kashmir Package</h2>
                 <p class="text-gray-600 mb-6 text-lg">
-                    Explore the valleys of Srinagar, the meadows of Gulmarg, and the glaciers of Sonmarg. Experience the hospitality of Kashmir with our all-inclusive tour.
+                    Explore the valley of Kashmir, Dal Lake in Srinagar, meadows of Gulmarg, glaciers of Sonamarg, and the
+                    beauty of Pahalgam and others.Experience the hospitality of Kashmir with our all-inclusive tour.
                 </p>
-                
-                <div class="grid grid-cols-2 gap-4 mb-8">
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-check-circle text-mountain-500"></i> <span>5 Days / 4 Nights</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-check-circle text-mountain-500"></i> <span>Breakfast & Dinner</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-check-circle text-mountain-500"></i> <span>Shikara Ride</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-check-circle text-mountain-500"></i> <span>Airport Pickup</span>
-                    </div>
-                </div>
-
+                <h2 class="text-2xl md:text-xl font-bold text-ocean-700 mt-2 mb-6">4 Nights / 5 Days</h2>
+    
                 <div class="bg-snow border-l-4 border-ocean-600 p-4 mb-8">
                     <p class="text-gray-500 text-sm">Starting Price</p>
-                    <p class="text-4xl font-bold text-ocean-700">₹14,999 <span class="text-lg text-gray-500 font-normal">/ per head</span></p>
+                    <p class="text-4xl font-bold text-ocean-700">₹16,999
+                        <span class="text-lg text-gray-500 font-normal">/ per head (Min. 2 Persons)</span>
+                    </p>
+                    <h4>📌 Price may change during peak season & snowfall dates</h4>
                 </div>
-
-                <button class="bg-ocean-600 hover:bg-ocean-700 text-white font-bold py-3 px-8 rounded shadow-lg transition">
-                    Book This Package
+                <h2 class="text-xl md:text-xl font-bold text-ocean-700 mt-2 mb-6">📍 Pickup points available</h2>
+                <div class="grid grid-cols-3 gap-4 mb-8">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt text-mountain-500"></i> <span> Delhi NCR</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt text-mountain-500"></i> <span>Katra</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt text-mountain-500"></i> <span>Kashmir</span>
+                    </div>
+                </div>
+    
+                <!-- More Info Button -->
+                <button onclick="document.getElementById('infoBox').classList.remove('hidden')"
+                    class="bg-ocean-600 hover:bg-ocean-700 text-white font-bold py-3 px-8 rounded shadow-lg transition flex items-center gap-2">
+                    More Info <i class="fas fa-arrow-right"></i>
                 </button>
             </div>
         </div>
     </section>
+    
+    <!-- Landscape Info Box -->
+    <div id="infoBox" onclick="this.classList.add('hidden')"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div onclick="event.stopPropagation()"
+            class="bg-ocean-700 text-white rounded-lg shadow-2xl w-[90%] max-w-5xl p-8 overflow-y-auto max-h-[90vh]">
+    
+            <!-- Title -->
+            <h2 class="text-3xl font-bold mb-4 text-center">🌄 Kashmir Tour Package – 4 Nights / 5 Days 🌄</h2>
+            <p class="text-center mb-4">📍 Srinagar – Gulmarg – Pahalgam – Sonamarg</p>
+            <p class="text-center mb-4">🗓️ 4 Nights / 5 Days</p>
+            <p class="text-center mb-6">💰 Package Cost: 👉 ₹17,000 per person (Minimum 2 persons)</p>
+    
+            <!-- Itinerary -->
+            <h3 class="text-2xl font-bold mb-2">🗓️ Itinerary</h3>
+            <ul class="list-disc list-inside space-y-2 mb-6">
+                <li><strong>Day 01:</strong> Arrival at Srinagar – Airport pickup, transfer to hotel/houseboat, leisure
+                    time, overnight stay</li>
+                <li><strong>Day 02:</strong> Srinagar – Gulmarg – Srinagar – Breakfast, full day touring, Snow
+                    Point/Meadow walk (Gondola optional), overnight stay</li>
+                <li><strong>Day 03:</strong> Srinagar – Pahalgam – Srinagar – Breakfast, visit Lidder River, optional
+                    Aru/Betaab Valley (extra), overnight stay</li>
+                <li><strong>Day 04:</strong> Srinagar – Sonamarg – Srinagar – Breakfast, Thajiwas Glacier (pony optional),
+                    evening Shikara Ride, overnight stay</li>
+                <li><strong>Day 05:</strong> Departure – Breakfast, drop at Srinagar Airport, tour ends</li>
+            </ul>
+    
+            <!-- Inclusions -->
+            <h3 class="text-2xl font-bold mb-2">✅ Inclusions</h3>
+            <ul class="list-disc list-inside space-y-1 mb-6">
+                <li>Hotel / Houseboat stay (Budget category)</li>
+                <li>Breakfast & Dinner</li>
+                <li>All sightseeing & transfers by cab</li>
+                <li>Airport pickup & drop</li>
+                <li>1 Shikara Ride</li>
+                <li>Driver, fuel, parking & toll</li>
+            </ul>
+    
+            <!-- Exclusions -->
+            <h3 class="text-2xl font-bold mb-2">❌ Exclusions</h3>
+            <ul class="list-disc list-inside space-y-1 mb-6">
+                <li>Flight / Train tickets</li>
+                <li>Gondola, pony rides, entry tickets</li>
+                <li>Lunch & personal expenses</li>
+            </ul>
+    
+            <p class="text-sm mb-6">📌 Price may change during peak season & snowfall dates</p>
+    
+            <!-- Contact Icons -->
+            <div class="flex justify-center gap-8 text-3xl">
+                <a href="tel:+917298256040" class="hover:text-green-300"><i class="fas fa-phone"></i></a>
+                <a href="https://wa.me/917298256040" target="_blank" class="hover:text-green-400"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="mailto:katariatourandtravel11@gmail.com" class="hover:text-blue-300"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
 
-    <section id="gallery" class="py-20 bg-snow">
+
+
+    <section id="gallery" class="scroll-mt-16 py-20 bg-snow">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-ocean-700 mb-4">Top Destinations</h2>
@@ -204,28 +259,28 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-80">
-                    <img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Dal Lake">
+                    <img src="assets/dal.jpeg?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Dal Lake">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
                         <h3 class="text-white text-xl font-bold">Dal Lake</h3>
                         <p class="text-gray-200 text-sm">Srinagar</p>
                     </div>
                 </div>
                 <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-80">
-                    <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gulmarg">
+                    <img src="assets/gulmarg.jpeg?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gulmarg">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
                         <h3 class="text-white text-xl font-bold">Gulmarg</h3>
                         <p class="text-gray-200 text-sm">Skiing Paradise</p>
                     </div>
                 </div>
                 <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-80">
-                    <img src="https://external-preview.redd.it/BwRtE8K8phaeKREj0xDkB2-1qfAZZfIwCAlQcQT1VYg.jpg?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Sonmarg">
+                    <img src="assets/sonmarg.jpeg?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Sonmarg">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
                         <h3 class="text-white text-xl font-bold">Sonmarg</h3>
                         <p class="text-gray-200 text-sm">Meadow of Gold</p>
                     </div>
                 </div>
                 <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-80">
-                    <img src="https://images.unsplash.com/photo-1623157299066-665287f32997?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Pahalgam">
+                    <img src="assets/pahalgam.jpeg?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Pahalgam">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
                         <h3 class="text-white text-xl font-bold">Pahalgam</h3>
                         <p class="text-gray-200 text-sm">Valley of Shepherds</p>
@@ -235,7 +290,7 @@
         </div>
     </section>
 
-    <section class="py-20 bg-white">
+    <section class="scroll-mt-16 py-20 bg-snow">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center text-ocean-700 mb-12">What Our Travelers Say</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -264,6 +319,8 @@
         </div>
     </section>
 
+    
+    
     <section class="py-20 bg-ocean-700 text-white">
         <div class="container mx-auto px-6 max-w-4xl">
             <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
@@ -292,9 +349,9 @@
 
     <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                 <div class="col-span-1 md:col-span-1">
-                    <h3 class="text-2xl font-bold mb-4">Kataria Travels</h3>
+                    <h3 class="text-2xl font-bold mb-4">Kataria Tour & Travels</h3>
                     <p class="text-gray-400">Your trusted partner for exploring the valleys of Jammu & Kashmir and beyond.</p>
                 </div>
                 <div>
@@ -310,24 +367,16 @@
                     <h4 class="text-lg font-bold mb-4 text-mountain-500">Contact Us</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li><i class="fas fa-map-marker-alt mr-2"></i> Srinagar, Jammu & Kashmir, India</li>
-                        <li><i class="fas fa-phone mr-2"></i> +91 98765 43210</li>
-                        <li><i class="fas fa-envelope mr-2"></i> info@katariatravels.com</li>
+                        <li><i class="fas fa-phone mr-2"></i> +91 72982 56040</li>
+                        <li><i class="fas fa-envelope mr-2"></i> katariatourandtravel11@gmail.com</li>
                     </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold mb-4 text-mountain-500">Newsletter</h4>
-                    <form class="flex flex-col gap-2">
-                        <input type="email" placeholder="Your Email" class="bg-gray-800 text-white p-2 rounded focus:outline-none">
-                        <button class="bg-ocean-600 hover:bg-ocean-500 text-white font-bold py-2 rounded">Subscribe</button>
-                    </form>
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
                 <p>&copy; 2024 Kataria Tour & Travels. All rights reserved.</p>
                 <div class="mt-4 space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/rimtiyaz.kataria" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/kha_n__immu__0786?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -355,4 +404,3 @@
     </script>
 </body>
 </html>
-
